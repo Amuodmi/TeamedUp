@@ -1,17 +1,25 @@
 const manaQues = [
     {
         type: "input",
-        name: "name",
-        message: "What is the managers preferred name?"
+        name: "managerName",
+        message: "What is the managers preferred name?",
+        validate: nameInput => {
+            if (nameInput) {
+              return true;
+            } else {
+              console.log('Please enter a name!');
+              return false;
+            }
+          }        
     },
     {
         type: "input",
-        name: "id",
+        name: "managerID",
         message: "What is the managers ID number?"
     },
     {
         type: "input",
-        name: "email",
+        name: "managerEmail",
         message: "What is the managers email address?"
     },
     {

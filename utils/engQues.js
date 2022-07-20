@@ -1,22 +1,30 @@
 const engQues  = [
     {
         type: "input",
-        name: "name",
-        message: "What will the preferred name of the Engineer be?"
+        name: "engineerName",
+        message: "What will the preferred name of the Engineer be?",
+        validate: nameInput => {
+            if (nameInput) {
+              return true;
+            } else {
+              console.log('Please enter a name!');
+              return false;
+            }
+          }
     },
     {
         type: "input",
-        name: "id",
+        name: "engineerID",
         message: "What will the Engineers ID number be?"
     },
     {
         type: "input",
-        name: "email",
+        name: "engineerEmail",
         message: "What is the Engineers email?"
     },
     {
         type: "input",
-        name: "github",
+        name: "engineerGithub",
         message: "What is the Engineers Github username?"
     }
 ];

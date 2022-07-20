@@ -1,17 +1,25 @@
 const empQues = [
     {
         type: "input",
-        name: "name",
-        message: "What is the employee's preferred name?"
+        name: "employeeName",
+        message: "What is the employee's preferred name?",
+        validate: nameInput => {
+            if (nameInput) {
+              return true;
+            } else {
+              console.log('Please enter a name!');
+              return false;
+            }
+          }
     },
     {
         type: "input",
-        name: "id",
+        name: "employeeID",
         message: "What is the employee's ID number?"
     },
     {
         type: "input",
-        name: "email",
+        name: "employeeEmail",
         message: "What is the employee's email?"
     }
 ];

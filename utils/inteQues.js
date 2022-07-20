@@ -1,17 +1,25 @@
 const inteQues = [
     {
         type: "input",
-        name: "name",
-        message: "What is the Interns preferred name?"
+        name: "internName",
+        message: "What is the Interns preferred name?",
+        validate: nameInput => {
+            if (nameInput) {
+              return true;
+            } else {
+              console.log('Please enter a name!');
+              return false;
+            }
+          }
     },
     {
         type: "input",
-        name: "name", 
+        name: "internID", 
         message: "What is the Interns ID number?"
     },
     {
         type: "input",
-        name: "name", 
+        name: "internEmail", 
         message: "What is the Interns email address?"
     },
     {
