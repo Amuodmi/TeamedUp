@@ -1,4 +1,3 @@
-
 class htmlCode{
    
   static generateHTML(createMember) {
@@ -26,25 +25,25 @@ class htmlCode{
   <div class="col"><u>Managers</u><br>
   ${createMember.managerName}
   ${createMember.managerID}
-  ${createMember.managerEmail}
+  Email: <a href="mailto:${createMember.managerEmail}"></a>
   ${createMember.office}
   </div>
   <div class="col"><u>Engineers</u><br>
   ${createMember.engineerName}
   ${createMember.engineerID}
-  ${createMember.engineerEmail}
-  ${createMember.engineerGithub}
+  Email: <a href="mailto:${createMember.engineerEmail}"></a>
+  Github: <a href="https://www.github.com/${createMember.engineerGithub}" target="_blank"></a>
   </div>
   <div class="col"><u>Employees</u><br>
   ${createMember.employeeName}
   ${createMember.employeeID}
-  ${createMember.employeeEmail}
+  Email: <a href="mailto:${createMember.employeeEmail}"></a>
   </div>
   <div class="col"><u>Interns</u><br>
   ${createMember.internName}
   ${createMember.internID}
-  ${createMember.internEmail}
-  ${createMember.school}
+  Email: <a href="mailto:${createMember.internEmail}"></a>
+  School: ${createMember.school}
   </div>
   </div>
     </div>
