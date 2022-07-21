@@ -1,8 +1,8 @@
 class htmlCode{
-   
-  static generateHTML(createMember) {
+
+static generateHTML(createMember) {
   
-      // TODO: this is going to generate an HTML string
+      //this is going to generate an HTML string
       return `
 
       <!DOCTYPE html>
@@ -12,6 +12,7 @@ class htmlCode{
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+                <link rel="stylesheet" href="style.css">
                 <title>Teamed Up</title>
             </head>
             <body>
@@ -34,11 +35,6 @@ class htmlCode{
   Email: <a href="mailto:${createMember.engineerEmail}"></a>
   Github: <a href="https://www.github.com/${createMember.engineerGithub}" target="_blank"></a>
   </div>
-  <div class="col"><u>Employees</u><br>
-  ${createMember.employeeName}
-  ${createMember.employeeID}
-  Email: <a href="mailto:${createMember.employeeEmail}"></a>
-  </div>
   <div class="col"><u>Interns</u><br>
   ${createMember.internName}
   ${createMember.internID}
@@ -55,6 +51,7 @@ class htmlCode{
     
     }};
   
+
     module.exports = htmlCode 
   
   
