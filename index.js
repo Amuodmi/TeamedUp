@@ -1,12 +1,12 @@
-const empQues = require("./utils/empQues");
-const manaQues = require("./utils/manaQues");
-const engQues = require("./utils/engQues.js");
-const inteQues = require("./utils/inteQues");
-
-const htmlCode = require('./htmlCode.js');
-
 const inquirer = require("inquirer");
 const fs = require("fs");
+
+//const Employee = require("./lib/employee");
+const Manager = require("./lib/manager");
+const Engineer = require("./lib/engineer");
+const Intern = require("./lib/intern");
+
+const htmlCode = require('./htmlCode.js');
 
 const members = []
 
@@ -26,13 +26,14 @@ function startQuestions() {
   ])
       .then((answers) => {
        //starts next question
-        promptEmployeeType() });
+        promptEmployeeType(answers)
+      
+});
 
         function promptEmployeeType(answers) {
           //if Intern was chosen, these prompts will begin:
           if (answers.employeeType === "Intern") {
-              return inquirer
-                  .prompt([
+              return inquirer.prompt([
                       {
                           type: "input",
                           name: "internName",
@@ -90,15 +91,14 @@ function startQuestions() {
                       //captures data and stores it in a new Intern object
                       const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.internSchool);
                       //add new intern obj to the team array
-                      team.push(intern);
+                      members.push(intern);
                       //returns to menu
                       promptEmployeeType();
                   })
           }
           //if Engineer was selcted, these prompts will begin:
           if (answers.employeeType === "Engineer") {
-              return inquirer
-                  .prompt([
+              return inquirer.prompt([
                       {
                           type: "input",
                           name: "engineerName",
@@ -154,7 +154,7 @@ function startQuestions() {
                   ])
                   .then((answers) => {
                       const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGitHub);
-                      team.push(engineer);
+                      members.push(engineer);
                       promptEmployeeType();
                   })
           }
@@ -166,8 +166,8 @@ function startQuestions() {
                   type: "input",
                   name: "managerName",
                   message: "What is the Manager's name? (Required)",
-                  validate: managerNameInput => {
-                      if (managerNameInput) {
+                  validate: managerNameChoice=> {
+                      if (managerNameChoice) {
                           return true;
                       } else {
                           console.log("Please enter the Manager's name!");
@@ -179,8 +179,8 @@ function startQuestions() {
                   type: "input",
                   name: "managerId",
                   message: "What will the Manager's employee ID be? (Required)",
-                  validate: managerIdInput => {
-                      if (managerIdInput) {
+                  validate: managerIdChoice => {
+                      if (managerIdChoice) {
                           return true;
                       } else {
                           console.log('Please enter the employee id');
@@ -192,8 +192,8 @@ function startQuestions() {
                   type: "input",
                   name: "managerEmail",
                   message: "What is the Manager's email? (Required)",
-                  validate: managerEmailInput => {
-                      if (managerEmailInput) {
+                  validate: managerEmailChoice => {
+                      if (managerEmailChoice) {
                           return true;
                       } else {
                           console.log("Please enter the Manager's email address");
@@ -217,8 +217,8 @@ function startQuestions() {
           ])
           .then((answers) => {
               const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
-              team.push(manager);
-              promptEmployee();
+              members.push(manager);
+              promptEmployeeType();
           })      
       }
 ////////////////////////////////////////  
@@ -227,16 +227,15 @@ function startQuestions() {
 
 
 //if END was selcted the webpage will generate:
+
 // Function that will create team
 // async function createTeam(){
 //     return inquirer.prompt(startQuestions)
 //     .then((createMember) => {
       
-//       const generate = htmlCode.generateHTML(createMember);
+    //const generate = htmlCode.generateHTML(createMember);
   
-
-        console.log("Webpage generated! Please see the index.html file in the dist folder to review your team.")
-      fs.writeFile('index.html', generate, (err) => {
+      fs.writeFile('index.html', htmlCode(members), (err) => {
         if (err) {
            console.log('Could not create file', err)
         } else {
@@ -249,7 +248,7 @@ function startQuestions() {
     });
     }
   
-  };
+}};
 
 
 
