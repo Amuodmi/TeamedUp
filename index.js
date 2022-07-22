@@ -18,7 +18,7 @@ function startQuestions() {
   inquirer.prompt([
 {
     type: "list",
-    name: "member",
+    name: "employeeType",
     message: "Choose the type of employee you are adding to your team:",
     choices: ["Manager", "Engineer", "Intern", "End"]
 }
@@ -92,7 +92,7 @@ function startQuestions() {
                       //add new intern obj to the team array
                       members.push(intern);
                       //returns to menu
-                      promptEmployeeType();
+                      startQuestions();
                   })
           }
           //if Engineer was selcted, these prompts will begin:
@@ -154,11 +154,11 @@ function startQuestions() {
                   .then((answers) => {
                       const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.engineerGitHub);
                       members.push(engineer);
-                      promptEmployeeType();
+                      startQuestions();
                   })
           }
 
-          //if Manager was selcted, these prompts will begin:
+          //if Manager was selected, then these prompts will begin:
           if (answers.employeeType === "Manager") {
             return inquirer.prompt([
               {
@@ -217,7 +217,7 @@ function startQuestions() {
           .then((answers) => {
               const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
               members.push(manager);
-              promptEmployeeType();
+              startQuestions();
           })      
       }
 ////////////////////////////////////////  

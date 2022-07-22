@@ -1,8 +1,7 @@
-const Employee = require('./lib/employee');
-const Manager = require('./lib/manager');
 
       function getManager(members){
-      //this is going to generate an HTML string
+      
+        //this is going to generate an HTML string
       return `
       <div class="col"><u>Managers</u><br>
       ${members.managerName}
@@ -73,4 +72,4 @@ ${getIntern(members)}
 </html>
     `;
   
-    };
+};
