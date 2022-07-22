@@ -1,12 +1,14 @@
-const Manager = require("./lib/manager");
+const Employee = require('./lib/employee');
+const Manager = require('./lib/manager');
 
       function getManager(members){
       //this is going to generate an HTML string
       return `
       <div class="col"><u>Managers</u><br>
-      ${getManager(members)}
-      Email: <a href="mailto:${getManager.getEmail}"></a>
-      ${manager.getOffice}
+      ${members.managerName}
+      ${members.managerID}
+      Email: <a href="mailto:${members.managerEmail}"></a>
+      ${members.managerOffice}
       </div>
       `;
      };
@@ -14,22 +16,24 @@ const Manager = require("./lib/manager");
      function getEngineer(members){
       return `
       <div class="col"><u>Engineers</u><br>
-      ${getEngineer(members)}
-      Email: <a href="mailto:${createMember.engineerEmail}"></a>
-      Github: <a href="https://www.github.com/${createMember.engineerGithub}" target="_blank"></a>
+      ${members.engineerName}
+      ${members.engineerID}
+      Email: <a href="mailto:${members.engineerEmail}"></a>
+      Github: <a href="https://www.github.com/${members.engineerGithub}" target="_blank"></a>
       </div>
       
-      `
+      `;
      }
 
      function getIntern(members){
       return `
       <div class="col"><u>Interns</u><br>
-      ${getIntern(members)}
-      Email: <a href="mailto:${createMember.internEmail}"></a>
-      School: ${createMember.school}
+      ${members.interName}
+      ${members.internID}
+      Email: <a href="mailto:${members.internEmail}"></a>
+      School: ${members.internSchool}
       </div>
-      `
+      `;
      }
   
 

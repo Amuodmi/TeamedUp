@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-//const Employee = require("./lib/employee");
+const Employee = require("./lib/employee");
 const Manager = require("./lib/manager");
 const Engineer = require("./lib/engineer");
 const Intern = require("./lib/intern");
@@ -20,8 +20,7 @@ function startQuestions() {
     type: "list",
     name: "member",
     message: "Choose the type of employee you are adding to your team:",
-    choices: ["Manager", "Engineer", "Intern", "End"],
-
+    choices: ["Manager", "Engineer", "Intern", "End"]
 }
   ])
       .then((answers) => {
@@ -203,7 +202,7 @@ function startQuestions() {
               },
               {
                   type: "input",
-                  name: "managerOfficeNumber",
+                  name: "managerOffice",
                   message: "What will the Managers office number be? (Required)",
                   validate: managerOfficeNumberChoice => {
                       if (managerOfficeNumberChoice) {
@@ -242,7 +241,7 @@ function startQuestions() {
            console.log('Success! New index.html file has been created')
         }
       });
-      fs.copyFile('./src/style.css', './dist/style.css', err => {
+      fs.copyFile('./src/style.css', './create/style.css', err => {
         // if there's an error
         if (err) throw err;
     });
