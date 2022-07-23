@@ -3,10 +3,10 @@ function getManager(members){
       
     //this is going to generate an HTML string
   return `
-  <div class="col"><u>Managers</u><br>
-  ${members.name}
-  ${members.id}
-  Email: <a href="mailto:${members.email}"></a>
+  <div id= "name" class="col"><u>Managers</u><br>
+  ${members.name}<br>
+  ${members.id}<br>
+  <b>Email:</b><a href="mailto:${members.email}">${members.email}</a><br>
   ${members.officeNumber}
   </div>
   `;
@@ -14,11 +14,11 @@ function getManager(members){
 
  function getEngineer(members){
   return `
-  <div class="col"><u>Engineers</u><br>
-  ${members.name}
-  ${members.id}
-  Email: <a href="mailto:${members.email}"></a>
-  Github: <a href="https://www.github.com/${members.github}" target="_blank"></a>
+  <div id= "name" class="col"><u>Engineers</u><br>
+  ${members.name}<br>
+  ${members.id}<br>
+  <b>Email:</b><a href="mailto:${members.email}">${members.email}</a><br>
+  <b>Github:</b><a href="https://github.com/${members.github}" target="_blank">${members.github}</a>
   </div>
   
   `;
@@ -26,11 +26,11 @@ function getManager(members){
 
  function getIntern(members){
   return `
-  <div class="col"><u>Interns</u><br>
-  ${members.name}
-  ${members.id}
-  Email: <a href="mailto:${members.email}"></a>
-  School: ${members.school}
+  <div id= "name" class="col"><u>Interns</u><br>
+  ${members.name}<br>
+  ${members.id}<br>
+  <b>Email:</b><a href="mailto:${members.email}">${members.email}</a><br>
+  <b>School:</b> ${members.school}
   </div>
   `;
  }
@@ -63,7 +63,7 @@ function getManager(members){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./src/style.css">
     <title>Teamed Up</title>
 </head>
 <body>

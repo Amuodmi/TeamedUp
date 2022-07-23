@@ -4,7 +4,7 @@ const Engineer = require('../lib/Engineer');
 test('gets github username', () => {
     const engineer = new Engineer('Rand', '1002', 'Rand@work.com', 'GitRandy');
 
-    expect(engineer.getGitHub()).toEqual(expect.any(String));
+    expect(engineer.getGithub()).toEqual(expect.any(String));
 });
 
 //tests getPosition()

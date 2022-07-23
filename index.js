@@ -215,7 +215,7 @@ function startQuestions() {
               }
           ])
           .then((answers) => {
-              const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOfficeNumber);
+              const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.managerOffice);
               members.push(manager);
               startQuestions();
           })      
