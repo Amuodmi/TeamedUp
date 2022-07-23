@@ -220,21 +220,15 @@ function startQuestions() {
               startQuestions();
           })      
       }
-////////////////////////////////////////  
+
  else {
 
-
+let teammates = members
 
 //if END was selcted the webpage will generate:
 
-// Function that will create team
-// async function createTeam(){
-//     return inquirer.prompt(startQuestions)
-//     .then((createMember) => {
-      
-    //const generate = htmlCode.generateHTML(createMember);
-  
-      fs.writeFile('index.html', htmlCode(members), (err) => {
+      fs.writeFile('index.html', htmlCode(teammates), (err) => {
+        
         if (err) {
            console.log('Could not create file', err)
         } else {
