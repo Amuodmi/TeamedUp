@@ -10,13 +10,16 @@
 <div id='id-description'/>  
 
 ### Description
-A Javascript application that generates an Employee List, including contact information.
+A Javascript application that generates an Employee List, including contact information. The CSS is currently not completed on the application, and will be improved in the future. 
 
 
 <div id='id-screenshot'/>   
 
 ### Screenshot and Demo
 
+![TeamedUp Screenshot](./src/TeamedUpScreenshot.jpg?raw=true)
+
+![TeamedUp Video](https://drive.google.com/file/d/1ReUGUG42u4tiiLV09cT8VcUi2fPhH8BV/view)
 
 <div id='id-installation'/>   
 
