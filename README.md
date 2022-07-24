@@ -17,8 +17,7 @@ A Javascript application that generates an Employee List, including contact info
 
 ### Screenshot and Demo
 
-![TeamedUp Screenshot](/https://github.com/Amuodmi/TeamedUp/blob/main/src/TeamedUpScreenshot.png)
-
+![TeamedUpScreenshot](https://user-images.githubusercontent.com/104099393/180631289-ff679663-a3c2-42ae-8f3c-469db8b7303a.png)
 
 
 https://user-images.githubusercontent.com/104099393/180631223-1ae09b38-1849-4b17-8669-8ca238e7f3d8.mov
