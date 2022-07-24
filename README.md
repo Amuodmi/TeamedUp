@@ -17,7 +17,9 @@ A Javascript application that generates an Employee List, including contact info
 
 ### Screenshot and Demo
 
-![TeamedUp Screenshot](src/TeamedUpScreenshot.jpg?raw=true)
+![TeamedUp Screenshot](/https://github.com/Amuodmi/TeamedUp/blob/main/src/TeamedUpScreenshot.png)
+
+
 
 https://user-images.githubusercontent.com/104099393/180631223-1ae09b38-1849-4b17-8669-8ca238e7f3d8.mov
 
@@ -25,7 +27,6 @@ https://user-images.githubusercontent.com/104099393/180631223-1ae09b38-1849-4b17
 
 ### Installation
 You'll need to install Node.js. Afterwards, download, pull, or fork the repository. Once in your VS Code, or editor of choice: run npm i inquirer@8.2.4, and npm i jest, in your terminal.
-
 
 
  <div id='id-questions'/>   
