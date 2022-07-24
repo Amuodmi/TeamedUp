@@ -10,7 +10,7 @@
 <div id='id-description'/>  
 
 ### Description
-A Javascript application that generates an Employee List, including contact information. The CSS is currently not completed on the application, and will be improved in the future. 
+A Javascript application that generates an Employee List, including contact information. The CSS is currently not fully completed on the application, and will be improved in the future. 
 
 
 <div id='id-screenshot'/>   
